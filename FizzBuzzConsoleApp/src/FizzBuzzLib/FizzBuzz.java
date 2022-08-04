@@ -1,6 +1,6 @@
 package FizzBuzzLib;
 
-public class FizzBuzz implements IFizzBuzz {
+public class FizzBuzz implements IFizzBuzz,IFizzBuzzRange {
 
 	//Overriding the FizzBuzzifyAnInt() method
 	//from the IFizzBuzz Interface
@@ -13,5 +13,16 @@ public class FizzBuzz implements IFizzBuzz {
 			return " FizzBuzz ";
 		else
 			return " | ";
+	}
+	
+	//Overriding the FizzBuzzValuesForRange() method
+	//from the IFizzBuzzRange Interface
+	public String [] FizzBuzzValuesForRange(int start,int end) {
+		String [] range = new String [end-start+2];
+		
+		for(int count = start; count<range.length;count++) {
+			range[count] = FizzBuzzifyAnInt(count);
+		}
+		return range;
 	}
 }
