@@ -12,7 +12,7 @@ public class FizzBuzz implements IFizzBuzz,IFizzBuzzRange {
 		else if(num%3==0 && num%5==0)
 			return " FizzBuzz ";
 		else
-			return " | ";
+			return " # ";
 	}
 	
 	//Overriding the FizzBuzzValuesForRange() method
